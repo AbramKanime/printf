@@ -20,14 +20,8 @@ typedef struct fmt
 
 int _putchar(char ch);
 int _puts(char *string);
-int printc(char *format, va_list);
-int printstr(char *format, va_list);
+int printstr(char *format, va_list pa);
 int _printf(const char *format, ...);
-int integer(int number);
-int _abs(int number);
-int printpercent(char *format, va_list pa);
-int printhex(char *format, va_list);
-int printHEX(char *format, va_list);
 int printocta(char *format, va_list);
 int print_int(va_list numbers);
 int ch(va_list charact);
