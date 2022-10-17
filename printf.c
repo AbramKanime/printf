@@ -14,10 +14,15 @@ int _printf(const char *format, ...)
 
 	form_spec op[] = {
 		{"c", ch},
-		{"s", str},
+		{"s", printstr},
 		{"d", print_int},
 		{"i", print_int},
 		{"u", u_int},
+		{"b", _binary},
+		{"R", _rot13},
+		{"o", printocta},
+		{"x", printhex},
+		{NULL, NULL}
 	};
 
 	if (format == NULL)
