@@ -28,5 +28,7 @@ int ch(va_list charact);
 int print_op(const char *format, format_spec *struct_arr, va_list list);
 int _strlen(char *string);
 int u_int(va_list number);
+int _rot13(va_list rot);
+int _bin(va_list num);
 
 #endif
