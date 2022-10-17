@@ -33,5 +33,7 @@ int _binary(va_list num);
 int _hex_str(unsigned int n, unsigned int hex, char alpha);
 int _hex_l(va_list hexa);
 int _hex_u(va_list hexa);
+int printDecimal(va_list lista);
+int printInteger(va_list lista);
 
 #endif
