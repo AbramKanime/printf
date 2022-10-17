@@ -30,5 +30,7 @@ int _strlen(char *string);
 int u_int(va_list number);
 int _rot13(va_list rot);
 int _bin(va_list num);
+int printDecimal(va_list lista);
+int printInteger(va_list lista);
 
 #endif
