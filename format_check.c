@@ -8,7 +8,7 @@
 *
 * Return: the character to be printed
 */
-int print_op(const char *format, format_spec *struct_arr, va_list list)
+int print_op(const char *format, form_spec *struct_arr, va_list list)
 {
 	char a;
 	int count = 0, b = 0, c = 0;
@@ -25,12 +25,12 @@ int print_op(const char *format, format_spec *struct_arr, va_list list)
 				a != *(struct_arr[c].type))
 				c++;
 			if (struct_arr[c].type != NULL)
-				count += struct_arr[c].f(list);
+				count = count + struct_arr[c].f(list);
 			else
 			{
 				if (a == '\0')
 					return (-1);
-				if (a != '%');
+				if (a != '%')
 					count += _putchar('%');
 				count += _putchar(a);
 			}

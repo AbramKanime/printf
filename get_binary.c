@@ -6,9 +6,9 @@
 *
 * Return: the binary form
 */
-int _bin(va_list num)
+int _binary(va_list num)
 {
-	int coun = 0, i;
+	int count = 0, i;
 	int *arr;
 	unsigned int n = va_arg(num, unsigned int);
 	unsigned int tmp = n;

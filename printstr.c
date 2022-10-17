@@ -2,19 +2,23 @@
 
 /**
  * printstr- print string.
- * @pa: gtgtg
- * @format: format string.
+ * @pa: argument list
+ * 
  * Return: number string for print.
  */
 
-int printstr(char *format, va_list pa)
+int printstr(va_list pa)
 {
-	char *string = va_arg(pa, char *);
-	int contador;
-	(void)format;
+	int len;
+	char *str;
 
-	if (string == NULL)
-		string = "(null)";
-	contador = _puts(string);
-	return (contador);
+	str = va_arg(pa, char *);
+
+	if (str == NULL)
+		str = "(null)";
+	len = 0;
+
+	while (str[len] != '\0')
+		len = len + _putchar(str[len]);
+	return (len);
 }

@@ -1,41 +1,33 @@
 #include "main.h"
 
 /**
- * printocta - prints an octal number
- * @format: format to print an octal number
- * @pa: list that contains the octal
- * Return: number.
+ * _oct - function to print octal
+ * @octo: list being passed
+ * Return: updated count
  */
-
-int printocta(char *format, va_list pa)
+int _oct(va_list octo)
 {
-	unsigned int num = va_arg(pa, unsigned int);
-	unsigned int copia;
-	char *octa;
-	int i, i2 = 0, contame = 0;
-	(void)format;
+	int count = 0, i;
+	int *arr;
+	unsigned int n = va_arg(octo, unsigned int);
+	unsigned int tmp = n;
 
-	if (num == 0)
-		return (_putchar('0'));
-	for (copia = num; copia != 0; i2++)
+	while (n / 8 != 0)
 	{
-		copia = copia / 8;
+		n /= 8;
+		count++;
 	}
-	octa = malloc(i2);
-	if (!octa)
-		return (-1);
-	for (i = i2 - 1; i >= 0; i--)
+	count++;
+	arr = malloc(count * sizeof(int));
+	for (i = 0; i < count; i++)
 	{
-		octa[i] = num % 8 + '0';
-		num = num / 8;
+		arr[i] = tmp % 8;
+		tmp /= 8;
 	}
-	for (i = 0; i < i2 && octa[i] == '0'; i++)
-		;
-	for (; i < i2; i++)
+	for (i = count - 1; i >= 0; i--)
 	{
-		_putchar(octa[i]);
-		contame++;
+		_putchar(arr[i] + '0');
 	}
-	free(octa);
-	return (contame);
+	free(arr);
+	return (count);
 }

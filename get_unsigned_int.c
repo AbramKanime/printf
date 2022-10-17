@@ -6,7 +6,7 @@
 *
 * Return: The unsigned int
 */
-int u_int(va_list number)
+int unsigned_int(va_list number)
 {
 	int index1 = 1, index0 = 0;
 	unsigned int n;

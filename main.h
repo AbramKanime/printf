@@ -15,20 +15,22 @@
 typedef struct fmt
 {
 	char *type;
-	int (*f)(char *format, va_list);
+	int (*f)();
 } form_spec;
 
-int _putchar(char ch);
-int _puts(char *string);
-int printstr(char *format, va_list pa);
+int _putchar(char c);
+int printstr(va_list pa);
 int _printf(const char *format, ...);
-int printocta(char *format, va_list);
+int _oct(va_list octo);
 int print_int(va_list numbers);
 int ch(va_list charact);
-int print_op(const char *format, format_spec *struct_arr, va_list list);
+int print_op(const char *format, form_spec *struct_arr, va_list list);
 int _strlen(char *string);
-int u_int(va_list number);
+int unsigned_int(va_list number);
 int _rot13(va_list rot);
-int _bin(va_list num);
+int _binary(va_list num);
+int _hex_str(unsigned int n, unsigned int hex, char alpha);
+int _hex_l(va_list hexa);
+int _hex_u(va_list hexa);
 
 #endif

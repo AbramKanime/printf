@@ -12,23 +12,24 @@ int _printf(const char *format, ...)
 	va_list list;
 	int i = 0;
 
-	form_spec op[] = {
+	form_spec ops[] = {
 		{"c", ch},
 		{"s", printstr},
 		{"d", print_int},
 		{"i", print_int},
-		{"u", u_int},
+		{"u", unsigned_int},
 		{"b", _binary},
 		{"R", _rot13},
-		{"o", printocta},
-		{"x", printhex},
+		{"o", _oct},
+		{"x", _hex_l},
+		{"X", _hex_u},
 		{NULL, NULL}
 	};
 
 	if (format == NULL)
 		return (-1);
 	va_start(list, format);
-	i = print_op(format, opss, list);
+	i = print_op(format, ops, list);
 	va_end(list);
 
 	return (i);
