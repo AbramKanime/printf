@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* _bin - function to print binary
+* _binary - function to print binary
 * @num: the list passed
 *
 * Return: the binary form

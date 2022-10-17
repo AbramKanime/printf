@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* u_int - function to print unsigned int
+* unsigned_int - function to print unsigned int
 * @number: number list
 *
 * Return: The unsigned int

@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 /**
- * struct structprint - structure containing
+ * struct fmt - structure containing
  * @type: the location and method to translate data to characters.
  * @f: print function for specific type.
  *
@@ -23,6 +23,7 @@ int printstr(va_list pa);
 int _printf(const char *format, ...);
 int _oct(va_list octo);
 int print_int(va_list numbers);
+int print_longint(va_list numbers);
 int ch(va_list charact);
 int print_op(const char *format, form_spec *struct_arr, va_list list);
 int _strlen(char *string);

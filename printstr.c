@@ -3,7 +3,7 @@
 /**
  * printstr- print string.
  * @pa: argument list
- * 
+ *
  * Return: number string for print.
  */
 
