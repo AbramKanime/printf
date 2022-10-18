@@ -1,5 +1,4 @@
 #include "main.h"
-#include "main.h"
 
 /**
 * _printf - prints output based on th format passed
