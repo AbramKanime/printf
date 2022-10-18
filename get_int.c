@@ -48,15 +48,13 @@ int print_longint(va_list numbers)
 
 	i = va_arg(numbers, int);
 
-	n = _putchar(48);
-
 	if (i < 0)
 	{
 		index1 = index1 + _putchar('-');
 		n = i * -1;
 	}
 	else
-		n = n + i;
+		n = i;
 	while (n / index2 > 9)
 	{
 		index2 *= 10;
