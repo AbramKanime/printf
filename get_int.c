@@ -43,10 +43,12 @@ int print_int(va_list numbers)
 */
 int print_longint(va_list numbers)
 {
-	long int i, index1 = 0, index2 = 1;
-	long int n;
+	int i, index1 = 0, index2 = 1;
+	int n;
 
-	i = va_arg(numbers, long int);
+	i = va_arg(numbers, int);
+
+	n = _putchar(48);
 
 	if (i < 0)
 	{
@@ -54,7 +56,7 @@ int print_longint(va_list numbers)
 		n = i * -1;
 	}
 	else
-		n = i;
+		n = n + i;
 	while (n / index2 > 9)
 	{
 		index2 *= 10;
